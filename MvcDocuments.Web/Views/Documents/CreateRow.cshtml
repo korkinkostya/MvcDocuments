@@ -1,0 +1,39 @@
+﻿@model MvcDocuments.Domain.Entities.DocumentRow
+
+<div class="row">
+    <div class="col-md-4">
+        <form method='post' asp-action='CreateRow'>
+
+            <h4>Добавление строки к документу</h4>
+            <hr/>
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input name='name' asp-for="Name" class="form-control"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input name='price' asp-for="Price" class="form-control" type="number" min="0" value="0" step=".01"/>
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <br>
+
+
+            <div class="form-group">
+                <input type="submit" value="Создать" class="btn btn-primary"/>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DocumentId">Обратно к редактированию документа</a>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

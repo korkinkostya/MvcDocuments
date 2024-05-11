@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcDocuments.Web", "MvcDocuments.Web\MvcDocuments.Web.csproj", "{B478856B-F88E-4B4C-96F3-6E411B3C843F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcDocuments.Domain", "MvcDocuments.Domain\MvcDocuments.Domain.csproj", "{CE13BAA6-3D8C-4439-A88B-2665B9E8CD13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcDocuments.Infrastructure", "MvcDocuments.Infrastructure\MvcDocuments.Infrastructure.csproj", "{CE1C32DE-5077-40BD-A62C-E481BF6B1C55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcDocuments.Application", "MvcDocuments.Application\MvcDocuments.Application.csproj", "{8646E770-86A2-41E0-AA38-1E40D9FC39FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B8354B79-8272-4209-AE7C-931DB1EA3778}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B478856B-F88E-4B4C-96F3-6E411B3C843F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B478856B-F88E-4B4C-96F3-6E411B3C843F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B478856B-F88E-4B4C-96F3-6E411B3C843F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B478856B-F88E-4B4C-96F3-6E411B3C843F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE13BAA6-3D8C-4439-A88B-2665B9E8CD13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE13BAA6-3D8C-4439-A88B-2665B9E8CD13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE13BAA6-3D8C-4439-A88B-2665B9E8CD13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE13BAA6-3D8C-4439-A88B-2665B9E8CD13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE1C32DE-5077-40BD-A62C-E481BF6B1C55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE1C32DE-5077-40BD-A62C-E481BF6B1C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE1C32DE-5077-40BD-A62C-E481BF6B1C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE1C32DE-5077-40BD-A62C-E481BF6B1C55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8646E770-86A2-41E0-AA38-1E40D9FC39FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8646E770-86A2-41E0-AA38-1E40D9FC39FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8646E770-86A2-41E0-AA38-1E40D9FC39FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8646E770-86A2-41E0-AA38-1E40D9FC39FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,35 @@
+@model MvcDocuments.Domain.Entities.DocumentRow
+
+@{
+    ViewData["Title"] = "Удалить";
+}
+
+<h3>Вы уверены, что хотите удалить эту строку?</h3>
+<div>
+    <hr/>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+
+    <form asp-action="DeleteRow">
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить строку" class="btn btn-default"/> |
+
+            <a asp-action="Edit" asp-route-id="@Model.DocumentId">Обратно к редактированию документа</a>
+
+
+        </div>
+    </form>
+</div>

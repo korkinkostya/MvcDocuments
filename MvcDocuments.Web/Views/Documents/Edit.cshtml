@@ -1,0 +1,89 @@
+@model MvcDocuments.Domain.Entities.Document
+
+@{
+    ViewData["Title"] = "Редактирование документа";
+}
+
+<h1>Редактирование документа</h1>
+
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id"/>
+
+            <div class="form-group">
+                <label asp-for="Number" class="control-label"></label>
+                <input asp-for="Number" class="form-control"/>
+                <span asp-validation-for="Number" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control"/>
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.TotalPrice)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TotalPrice)
+            </dd>
+
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>
+                        Название
+                    </th>
+                    <th>
+                        Цена
+                    </th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                @if (Model.Rows != null)
+                {
+                    foreach (var item in Model.Rows.OrderBy(r => r.Id))
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+                            <td>
+                                <a asp-action="EditRow" asp-route-id="@item.Id">Редактировать</a> |
+                                <a asp-action="DeleteRow" asp-route-id="@item.Id">Удалить</a>
+                            </td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+
+
+            <p>
+                <a asp-action="CreateRow" asp-route-id="@Model.Id">Создать новую строку</a>
+            </p>
+
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Обратно к списку документов</a>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}
